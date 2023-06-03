@@ -25,7 +25,7 @@
         return (
             <>
             
-            <li>
+            
             <div className="div" onClick={() => setSelected(!selected)} >
                 {
                     selected ?(
@@ -42,10 +42,12 @@
 
 
             </div>
+            <div className="like">
 
                 <button onClick={() =>handleLikes(item.id)}>Love</button>
                 <p>{item.likes} Loved This Pic</p>
-            </li>
+                </div>
+            
         
             
             
