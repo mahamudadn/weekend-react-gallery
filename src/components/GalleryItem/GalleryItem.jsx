@@ -1,5 +1,7 @@
     import { useState } from "react";
     import axios from "axios";
+    import './GalleryItem.css'
+    
 
     function GalleryItem({item, getGallery}) {
 
@@ -24,7 +26,7 @@
             <>
             
             <li>
-            <div onClick={() => setSelected(!selected)} >
+            <div className="div" onClick={() => setSelected(!selected)} >
                 {
                     selected ?(
                         //if selectedcis true
@@ -33,7 +35,7 @@
                         </p>
                     ): (
                         // if selected is false, show this
-                        <img src ={item.path} alt="images"></img>
+                        <img className="images" src ={item.path} alt="images"></img>
                     )
                 }
 
@@ -41,7 +43,8 @@
 
             </div>
 
-                <button onClick={handleLikes}>Love</button>
+                <button onClick={() =>handleLikes(item.id)}>Love</button>
+                <p>{item.likes} Loved This Pic</p>
             </li>
         
             
